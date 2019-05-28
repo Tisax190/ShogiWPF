@@ -23,5 +23,25 @@ namespace Shogi
         {
             InitializeComponent();
         }
+
+        private void ButPaysAjouter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButExit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButPaysValider_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TxtAjoutVille_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

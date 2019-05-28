@@ -59,6 +59,7 @@ namespace Shogi
         private void ButPaysValider_Click(object sender, RoutedEventArgs e)
         {
             Ville fenetre = new Ville(listePays.SelectedItem as PAYS);
+            fenetre.Show();
         }
     }
 }
