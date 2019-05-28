@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shogi", "Shogi\Shogi.csproj", "{0D88DE9A-D25A-4DBD-9A84-6AFDF7D1B601}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D88DE9A-D25A-4DBD-9A84-6AFDF7D1B601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D88DE9A-D25A-4DBD-9A84-6AFDF7D1B601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D88DE9A-D25A-4DBD-9A84-6AFDF7D1B601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D88DE9A-D25A-4DBD-9A84-6AFDF7D1B601}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A27FB83-461D-4B50-ADC0-A42EF537DBA3}
+	EndGlobalSection
+EndGlobal

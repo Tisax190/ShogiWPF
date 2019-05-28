@@ -1,0 +1,33 @@
+CREATE TABLE PAYS(
+idPays int NOT NULL IDENTITY(1,1),
+nomPays varchar(50),
+CONSTRAINT PK_PAYS PRIMARY KEY (idPays)
+);
+CREATE TABLE VILLE(
+idVille int NOT NULL IDENTITY(1,1),
+idPays int NOT NULL,
+nomVille varchar(50),
+CONSTRAINT PK_VILLE PRIMARY KEY (idVille)
+);
+CREATE TABLE CLUB(
+idClub int NOT NULL IDENTITY(1,1),
+idVille int NOT NULL,
+rueClub varchar(50),
+numClub int,
+nomClub varchar(50),
+CONSTRAINT PK_CLUB PRIMARY KEY (idClub)
+);
+CREATE TABLE JOUEUR(
+idJoueur int NOT NULL IDENTITY(1,1),
+idClub int NOT NULL ,
+nomJoueur varchar(50),
+prenomJoueur varchar(50),
+elo int,
+nbrVictoire int,
+nbrDefaire int,
+nbrMatch int,
+CONSTRAINT PK_JOUEUR PRIMARY KEY (idJoueur)
+);
+ALTER TABLE VILLE ADD CONSTRAINT FK_VILLE FOREIGN KEY (idPays) REFERENCES PAYS(idPays); 
+ALTER TABLE CLUB ADD CONSTRAINT FK_CLUB FOREIGN KEY (idVille) REFERENCES Ville(idVille);
+ALTER TABLE JOUEUR ADD CONSTRAINT FK_JOUEUR FOREIGN KEY (idClub) REFERENCES CLUB(idClub);
