@@ -58,8 +58,12 @@ namespace Shogi
 
         private void ButPaysValider_Click(object sender, RoutedEventArgs e)
         {
-            Ville fenetre = new Ville(listePays.SelectedItem as PAYS);
-            fenetre.Show();
+            if(listePays.SelectedItem!=null)
+            {
+                Ville fenetre = new Ville(listePays.SelectedItem as PAYS);
+                fenetre.Show();
+
+            }
         }
 
         private void MaGrid_MouseEnter(object sender, MouseEventArgs e) // nouveautée 2

@@ -64,8 +64,12 @@ namespace Shogi
 
         private void BtValider_Click(object sender, RoutedEventArgs e)
         {
-            StatJoueur joueur = new StatJoueur(listeJoueur.SelectedItem as JOUEUR);
-            joueur.Show();
+            if(listeJoueur.SelectedItem!=null)
+            {
+                StatJoueur joueur = new StatJoueur(listeJoueur.SelectedItem as JOUEUR);
+                joueur.Show();
+
+            }
         }
 
         private void TxtElo_KeyDown(object sender, KeyEventArgs e)

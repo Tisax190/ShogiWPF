@@ -60,8 +60,12 @@ namespace Shogi
 
         private void BtValid_Click(object sender, RoutedEventArgs e)
         {
-            Joueur joueur = new Joueur(listeClub.SelectedItem as CLUB);
-            joueur.Show();
+            if(listeClub.SelectedItem!=null)
+            {
+                Joueur joueur = new Joueur(listeClub.SelectedItem as CLUB);
+                joueur.Show();
+
+            }
         }
 
         private void ListeClub_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -52,8 +52,12 @@ namespace Shogi
 
         private void ButPaysValider_Click(object sender, RoutedEventArgs e)
         {
-            Club club = new Club(listeVille.SelectedItem as VILLE);
-            club.Show();
+            if(listeVille.SelectedItem!=null)
+            {
+                Club club = new Club(listeVille.SelectedItem as VILLE);
+                club.Show();
+
+            }
         }
 
         private void TxtAjoutVille_TextChanged(object sender, TextChangedEventArgs e)
