@@ -64,11 +64,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Club.xaml.cs">
+      <DependentUpon>Club.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DAO.cs" />
+    <Compile Include="Joueur.xaml.cs">
+      <DependentUpon>Joueur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StatJoueur.xaml.cs">
+      <DependentUpon>StatJoueur.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VILLE.cs" />
     <Compile Include="Ville.xaml.cs">
       <DependentUpon>Ville.xaml</DependentUpon>
     </Compile>
+    <Page Include="Club.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Joueur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,6 +101,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="StatJoueur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Ville.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

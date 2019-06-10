@@ -29,5 +29,9 @@ namespace Shogi
         public int? nbrMatch { get; set; }
 
         public virtual CLUB CLUB { get; set; }
+        public override string ToString()
+        {
+            return nomJoueur;
+        }
     }
 }

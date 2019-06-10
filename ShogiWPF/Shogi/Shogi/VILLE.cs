@@ -27,5 +27,10 @@ namespace Shogi
         public virtual ICollection<CLUB> CLUB { get; set; }
 
         public virtual PAYS PAYS { get; set; }
+
+        public override string ToString()
+        {
+            return this.nomVille;
+        }
     }
 }

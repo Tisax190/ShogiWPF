@@ -12,7 +12,7 @@
         <Button x:Name="butExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="692,377,0,0" Height="42" Click="ButExit_Click"/>
         <Button x:Name="butVilleValider" Content="Valider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Margin="396,380,0,0" Height="39" Click="ButPaysValider_Click"/>
         <Label x:Name="labNomVille" Content="Nom Ville :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="396,78,0,0" Height="23" Width="100"/>
-        <TextBox x:Name="txtAjoutVille" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="672,78,0,0" TextChanged="TxtAjoutVille_TextChanged"/>
+        <TextBox x:Name="txtAjoutVille" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="672,78,0,0" TextChanged="TxtAjoutVille_TextChanged" Text="{Binding SelectedItem.nomVille, ElementName=listeVille}"/>
 
     </Grid>
 </Window>
