@@ -6,17 +6,17 @@
         xmlns:local="clr-namespace:Shogi"
         mc:Ignorable="d"
         Title="StatJoueur" Height="450" Width="800">
-    <Grid x:Name="maGrid">
+    <Grid x:Name="maGrid" MouseEnter="MaGrid_MouseEnter" MouseLeave="MaGrid_MouseLeave">
         <Label Content="nbrDefaite" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,353,0,0"/>
         <Label Content="nbrVictoire" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,287,0,0"/>
         <Label Content="NbrMatch" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,228,0,0"/>
         <Label Content="Elo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,179,0,0"/>
         <Label Content="Prenom" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,101,0,0"/>
         <Label Content="Nom" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,51,0,0"/>
-        <TextBox x:Name="txtDefaite" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,356,0,0" Text="{Binding nbrDefaire}"/>
-        <TextBox x:Name="txtVictoire" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,287,0,0" Text="{Binding nbrVictoire}"/>
-        <TextBox x:Name="txtMatch" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,232,0,0" Text="{Binding nbrMatch}"/>
-        <TextBox x:Name="txtElo" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,182,0,0" Text="{Binding elo}"/>
+        <TextBox x:Name="txtDefaite" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,356,0,0" Text="{Binding nbrDefaire}" KeyDown="TxtDefaite_KeyDown"/>
+        <TextBox x:Name="txtVictoire" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,287,0,0" Text="{Binding nbrVictoire}" KeyDown="TxtVictoire_KeyDown"/>
+        <TextBox x:Name="txtMatch" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,232,0,0" Text="{Binding nbrMatch}" KeyDown="TxtMatch_KeyDown"/>
+        <TextBox x:Name="txtElo" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,182,0,0" Text="{Binding elo}" KeyDown="TxtElo_KeyDown"/>
         <TextBox x:Name="txtPrenom" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,119,0,0" Text="{Binding prenomJoueur}"/>
         <TextBox x:Name="txtNom" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="506,51,0,0" Text="{Binding nomJoueur}"/>
         <Button x:Name="butExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,338,0,0" Click="ButExit_Click"/>

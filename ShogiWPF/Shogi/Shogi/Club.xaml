@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Shogi"
         mc:Ignorable="d"
-        Title="Club" Height="450" Width="800">
-    <Grid x:Name="maGrid">
+        Title="Club" Height="450" Width="800"
+        >
+    <Grid x:Name="maGrid"         MouseEnter="MaGrid_MouseEnter"
+        MouseLeave="MaGrid_MouseLeave">
         <ListBox x:Name="listeClub" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="382" SelectionChanged="ListeClub_SelectionChanged"/>
         <Button x:Name="btValid" Content="Valider" Margin="387,366,306,5" Click="BtValid_Click"/>
         <Button x:Name="butExit" Content="Exit" Margin="686,366,10,5" Click="ButExit_Click"/>
@@ -15,7 +17,7 @@
         <TextBox x:Name="txtNom" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="614,83,0,0" Text="{Binding nomClub}"/>
         <Label Content="Nom du club" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="413,79,0,0"/>
         <Label Content="Rue du club" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="413,110,0,0"/>
-        <TextBox x:Name="txtTel" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="614,141,0,0" Text="{Binding numClub}"/>
+        <TextBox x:Name="txtTel" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="614,141,0,0" Text="{Binding numClub}" KeyDown="TxtTel_KeyDown"/>
         <TextBox x:Name="txtRue" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="614,114,0,0" Text="{Binding rueClub}"/>
 
     </Grid>

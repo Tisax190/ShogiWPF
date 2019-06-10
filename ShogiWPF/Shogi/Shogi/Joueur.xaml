@@ -6,20 +6,20 @@
         xmlns:local="clr-namespace:Shogi"
         mc:Ignorable="d"
         Title="Joueur" Height="725.641" Width="1130.769">
-    <Grid x:Name="maGrid">
+    <Grid x:Name="maGrid" MouseEnter="MaGrid_MouseEnter" MouseLeave="MaGrid_MouseLeave">
         <ListBox x:Name="listeJoueur" HorizontalAlignment="Left" Height="248" VerticalAlignment="Top" Width="505" SelectionChanged="ListeJoueur_SelectionChanged"/>
         <TextBox x:Name="txtNom" HorizontalAlignment="Left" Height="35" Margin="897,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Text="{Binding nomJoueur}"/>
         <TextBox x:Name="txtPrenom" TextWrapping="Wrap" Margin="897,78,92,575" Text="{Binding prenomJoueur}"/>
-        <TextBox x:Name="txtElo" TextWrapping="Wrap" Margin="897,125,92,525" Text="{Binding elo}"/>
-        <TextBox x:Name="txtVictoire" TextWrapping="Wrap" Margin="897,178,92,470" Text="{Binding nbrVictoire}"/>
-        <TextBox x:Name="txtDefaite" TextWrapping="Wrap" Margin="897,234,92,426" Text="{Binding nbrDefaire}"/>
-        <TextBox x:Name="txtMatch" TextWrapping="Wrap" Margin="897,284,92,373" Text="{Binding nbrMatch}"/>
-        <Label Content="Prenom" Margin="806,83,265,570"/>
-        <Label Content="Defaite" Margin="806,230,265,416"/>
-        <Label Content="Match" Margin="806,284,265,362"/>
-        <Label Content="Elo" Margin="806,130,265,525"/>
-        <Label Content="Victoire" Margin="806,175,247,470"/>
-        <Label Content="Nom" Margin="806,26,265,631"/>
+        <TextBox x:Name="txtElo" TextWrapping="Wrap" Margin="897,125,92,525" Text="{Binding elo}" KeyDown="TxtElo_KeyDown"/>
+        <TextBox x:Name="txtVictoire" TextWrapping="Wrap" Margin="897,178,92,470" Text="{Binding nbrVictoire}" KeyDown="TxtVictoire_KeyDown"/>
+        <TextBox x:Name="txtDefaite" TextWrapping="Wrap" Margin="897,234,92,426" Text="{Binding nbrDefaire}" KeyDown="TxtDefaite_KeyDown"/>
+        <TextBox x:Name="txtMatch" TextWrapping="Wrap" Margin="897,284,92,373" Text="{Binding nbrMatch}" KeyDown="TxtMatch_KeyDown"/>
+        <Label Content="Prenom" Margin="768,83,265,570"/>
+        <Label Content="Defaite" Margin="768,230,265,416"/>
+        <Label Content="Match" Margin="768,284,265,362"/>
+        <Label Content="Elo" Margin="768,130,265,525"/>
+        <Label Content="Victoire" Margin="768,175,247,470"/>
+        <Label Content="Nom" Margin="768,29,265,628"/>
         <Button x:Name="btValider" Content="Valider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="188" Margin="46,456,0,0" Height="56" Click="BtValider_Click"/>
         <Button x:Name="btAjout" Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="519,461,0,0" Click="BtAjout_Click" Height="51"/>
         <Button x:Name="btExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="911,456,0,0" Click="BtExit_Click" Height="56"/>

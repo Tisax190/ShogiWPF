@@ -61,5 +61,17 @@ namespace Shogi
             Ville fenetre = new Ville(listePays.SelectedItem as PAYS);
             fenetre.Show();
         }
+
+        private void MaGrid_MouseEnter(object sender, MouseEventArgs e) // nouveautée 2
+        {
+            if (this.Cursor != Cursors.Wait)
+                Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void MaGrid_MouseLeave(object sender, MouseEventArgs e) // nouveautée 2
+        {
+            if (this.Cursor != Cursors.Wait)
+                Mouse.OverrideCursor = Cursors.Arrow;
+        }
     }
 }

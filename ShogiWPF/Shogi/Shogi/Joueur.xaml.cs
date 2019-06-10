@@ -67,5 +67,41 @@ namespace Shogi
             StatJoueur joueur = new StatJoueur(listeJoueur.SelectedItem as JOUEUR);
             joueur.Show();
         }
+
+        private void TxtElo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key < Key.NumPad0 || e.Key > Key.NumPad9) e.Handled = true; // nouveautée 1
+            else e.Handled = false;
+        }
+
+        private void TxtDefaite_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key < Key.NumPad0 || e.Key > Key.NumPad9) e.Handled = true; // nouveautée 1
+            else e.Handled = false;
+        }
+
+        private void TxtMatch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key < Key.NumPad0 || e.Key > Key.NumPad9) e.Handled = true; // nouveautée 1
+            else e.Handled = false;
+        }
+
+        private void TxtVictoire_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key < Key.NumPad0 || e.Key > Key.NumPad9) e.Handled = true; // nouveautée 1
+            else e.Handled = false;
+        }
+
+        private void MaGrid_MouseEnter(object sender, MouseEventArgs e) // nouveautée 2
+        {
+            if (this.Cursor != Cursors.Wait)
+                Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void MaGrid_MouseLeave(object sender, MouseEventArgs e) // nouveautée 2
+        {
+            if (this.Cursor != Cursors.Wait)
+                Mouse.OverrideCursor = Cursors.Arrow;
+        }
     }
 }

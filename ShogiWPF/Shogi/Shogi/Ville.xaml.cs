@@ -60,5 +60,17 @@ namespace Shogi
         {
 
         }
+
+        private void MaGrid_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (this.Cursor != Cursors.Wait)
+                Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void MaGrid_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (this.Cursor != Cursors.Wait)
+                Mouse.OverrideCursor = Cursors.Arrow;
+        }
     }
 }

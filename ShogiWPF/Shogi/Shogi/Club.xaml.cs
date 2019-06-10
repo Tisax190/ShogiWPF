@@ -68,5 +68,22 @@ namespace Shogi
         {
             maGrid.DataContext = listeClub.SelectedItem;
         }
+
+        private void TxtTel_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key < Key.NumPad0 || e.Key > Key.NumPad9) e.Handled = true; // nouveautée 1
+            else e.Handled = false;
+        }
+        private void MaGrid_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (this.Cursor != Cursors.Wait)
+                Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void MaGrid_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (this.Cursor != Cursors.Wait)
+                Mouse.OverrideCursor = Cursors.Arrow;
+        }
     }
 }
